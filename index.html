@@ -23,6 +23,10 @@
     <link rel="stylesheet" href="css/style.css">
       
       <style>  
+          @import url('https://fonts.googleapis.com/css?family=Crimson+Text&display=swap');
+          @import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap');
+
+          @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
           .right-img img{
               position: relative;
               top: 50%;
@@ -30,7 +34,60 @@
               border-radius: 10px;
               width: 800px;
           }
+          h1.site-heading
+          { 
+              font-family: 'Crimson Text', serif;
+              font-weight: lighter;
+          }
+          h1.site-heading span{
+              font-family: 'Satisfy', cursive;
+              font-weight: lighter;
+          }
           .logo{filter: invert(100%);}
+          .fa-pepper-hot{
+              color: #FC5B5D;
+              margin-left: 10px;
+          }
+        .overlay-notify{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0,0,0,.6);
+            text-align: center;
+            z-index: 2000;
+        }
+        p.status{
+            color: #fff;
+            font-size: 1.3em;
+            font-family: 'Raleway', sans-serif;
+            margin-bottom: 30px;
+        }
+        .center-align{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            background-color: #303030;
+            padding: 20px;
+        }
+        .overlay-notify input{
+            position: absolute;
+            background-color: #fd990a;
+            color: #fff;
+            border: none;
+            width: 100px;
+            padding: 10px;
+            cursor: pointer;
+            outline: none;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .myButton{
+            font-size: 1em;
+        }
       </style>
   </head>
   <body data-spy="scroll" data-target="#site-navbar" data-offset="200">
@@ -56,13 +113,22 @@
       </div>
     </nav>
     <!-- END nav -->
-
+    
+        <div class="overlay-notify">
+            <div class="center-align">
+                <p class="status"></p>
+                <br>
+        <!--        <button class="myButton" onclick="change()" value="Got it">Got it!</button>-->
+                <input type="button" class="myButton" value="Got it!"/>
+            </div>
+        </div> 
+      
     <section class="site-cover" style="background-image: url(images/frymomos.jpg);" id="section-home">
         <div class="black-overlay">
             <div class="container">
                 <div class="row align-items-center justify-content-center text-center site-vh-100">
                   <div class="col-md-12">
-                    <h1 class="site-heading site-animate mb-3">Welcome To Momo Crave</h1>
+                    <h1 class="site-heading site-animate mb-3">Welcome To <span>Momo Crave</span></h1>
                     <h2 class="h5 site-subheading mb-5 site-animate">Come and experience our friendly atmosphere and excellent service.</h2>    
                   </div>
                 </div>
@@ -105,19 +171,19 @@
 
               <div class="item">
                 <div class="media d-block mb-4 text-center site-media site-animate border-0" style="background-color: transparent;">
-                  <a href="#" target="_blank"><img src="images/seamless.png" class="img-fluid" style="width: 170px;position: relative;left: 50%;transform: translateX(-50%);"></a>
+                  <a href="https://www.seamless.com/menu/momo-crave-3807-69th-st-woodside/890555" target="_blank"><img src="images/seamless.png" class="img-fluid" style="width: 170px;position: relative;left: 50%;transform: translateX(-50%);"></a>
                 </div>
               </div>
 
               <div class="item">
                 <div class="media d-block mb-4 text-center site-media site-animate border-0" style="background-color: transparent;">
-                  <a href="#" target="_blank"><img src="images/postmateslogo.png" class="img-fluid" style="width: 300px;"></a>
+                  <a href="https://postmates.com/merchant/momo-crave-woodside" target="_blank"><img src="images/postmateslogo.png" class="img-fluid" style="width: 300px;"></a>
                 </div>
               </div>
               
               <div class="item">
                 <div class="media d-block mb-4 text-center site-media site-animate border-0" style="background-color: transparent;">
-                  <a href="#" target="_blank"><img src="images/grubhub.png" class="img-fluid" style="width: 220px; position: relative;left: 50%;transform: translateX(-50%);"></a>
+                  <a href="https://www.grubhub.com/restaurant/momo-crave-3807-69th-st-woodside/890555" target="_blank"><img src="images/grubhub.png" class="img-fluid" style="width: 220px; position: relative;left: 50%;transform: translateX(-50%);"></a>
                 </div>
               </div>
 
@@ -196,7 +262,7 @@
                     <div class="media menu-item">
                       <img class="mr-3" src="images/sandeko.jpeg" class="img-fluid">
                       <div class="media-body">
-                        <h5 class="mt-0">Sandeko Momo</h5>
+                        <h5 class="mt-0">Sandeko Momo <i class="fas fa-pepper-hot"></i></h5>
                         <p>Marinated fried momo with spicy tangy sauce, mixed together with roasted soybean, onion, tomatoes and cilantro</p>
                         <h6 class="text-primary menu-price">$7.00</h6>
                       </div>
@@ -243,7 +309,7 @@
                     <div class="media menu-item">
                       <img class="mr-3" src="images/sukuti.jpeg" class="img-fluid">
                       <div class="media-body">
-                        <h5 class="mt-0">Sukuti Momo</h5>
+                        <h5 class="mt-0">Sukuti Momo <i class="fas fa-pepper-hot"></i></h5>
                         <p>Fried momo sautéed with garlic, ginger, sukuti (jerky) and marinated with special tangy spicy sauce, onion and cilantro</p>  
                         <h6 class="text-primary menu-price">$8.00</h6>
                       </div>
@@ -262,7 +328,7 @@
                       <img class="mr-3" src="images/samay.jpeg" class="img-fluid">
                       <div class="media-body">
                         <h5 class="mt-0">Samay Baji</h5>
-                        <p>A wide selection of platter with flattened rice,ground lentil patties, spiced potato, mixed pickle,spiced black gram and special marinated chicken</p>
+                        <p>A wide selection of platter with flattened rice, ground lentil patties, spiced potato, mixed pickle, spiced black gram and special marinated chicken</p>
                         <h6 class="text-primary menu-price">$10.00</h6>
                       </div>
                     </div>
@@ -360,6 +426,11 @@
               </div>    
                 
               <div class="tab-pane fade" id="pills-bara" role="tabpanel" aria-labelledby="pills-bara-tab">
+                <div class="row justify-content-center">
+                  <div class="col-md-7">
+                    <p class="lead" style="text-align: center;">Bara also called Wo are thick savory pancakes made from lentil paste mixed with spices</p>
+                  </div>
+                </div>  
                 <div class="row">
                   <div class="col-md-6 site-animate">
 
@@ -449,10 +520,21 @@
                       <img class="mr-3" src="images/lassi.png" class="img-fluid">
                       <div class="media-body">
                         <h5 class="mt-0">Mango Lassi</h5>
+                          <p>Yogurt-based creamy drink, blended with mango fruit and seasonings</p>
                         <h6 class="text-primary menu-price">$2.00</h6>
                       </div>
                     </div>  
+                    <div class="media menu-item">
+                      <img class="mr-3" src="images/lassi.jpg" class="img-fluid" >
+                      <div class="media-body">
+                        <h5 class="mt-0">Momo Crave Special Lassi</h5>
+                          <p>Yogurt-based creamy drink, blended with khoa and seasonings</p>
+                        <h6 class="text-primary menu-price">$4.00</h6>
+                      </div>
+                    </div>  
+  
 
+                      
                   </div>
                 </div>
               </div>        
@@ -601,14 +683,14 @@
            <div class="col-md-12 text-center">
             <div class="site-footer-widget mb-4">
               <ul class="site-footer-social list-unstyled ">
-                <li class="site-animate"><a href="#"><i class="fab fa-yelp" style="position: relative;top: 50%;transform: translateY(-50%);font-size: 30px;"></i></a></li>
-                <li class="site-animate"><a href="#"><i class="fab fa-facebook-f" style="position: relative;top: 50%;transform: translateY(-50%);font-size: 30px;"></i></a></li>
-                <li class="site-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                <li class="site-animate"><a href="https://www.yelp.com/biz/momo-crave-woodside" target="_blank"><i class="fab fa-yelp" style="position: relative;top: 50%;transform: translateY(-50%);font-size: 30px;"></i></a></li>
+                <li class="site-animate"><a href="https://www.facebook.com/momocrave/" target="_blank"><i class="fab fa-facebook-f" style="position: relative;top: 50%;transform: translateY(-50%);font-size: 30px;"></i></a></li>
+                <li class="site-animate"><a href="https://www.instagram.com/momocrave" target="_blank"><span class="icon-instagram"></span></a></li>
               </ul>
             </div>
           </div>
           <div class="col-md-12 text-center">
-            <p>Momo Crave <script>document.write(new Date().getFullYear());</script> All rights reserved | by AnupsDesign</p>
+            <p>Momo Crave <script>document.write(new Date().getFullYear());</script> All rights reserved | by <a href="mailto:whoisanup@gmail.com" style="text-decoration: none;">AnupsDesign</a></p>
           </div>
         </div>
       </div>
@@ -618,7 +700,7 @@
     <!-- loader -->
     <div id="site-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
-
+    <script src="js/date-script.js"></script>    
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -631,10 +713,6 @@
     <script src="js/jquery.timepicker.min.js"></script>
     
     <script src="js/jquery.animateNumber.min.js"></script>
-    
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="js/google-map.js"></script>
 
     <script src="js/main.js"></script>
 
