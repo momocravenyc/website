@@ -25,8 +25,9 @@
       <style>  
           @import url('https://fonts.googleapis.com/css?family=Crimson+Text&display=swap');
           @import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap');
-
           @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+          @import url('https://fonts.googleapis.com/css?family=Paytone+One&display=swap');
+          
           .right-img img{
               position: relative;
               top: 50%;
@@ -39,7 +40,12 @@
               font-family: 'Crimson Text', serif;
               font-weight: lighter;
           }
-          h1.site-heading span{
+          h1.site-heading span.span1{
+              font-family: 'Paytone One', sans-serif;
+              text-transform: uppercase;
+              font-size: .9em;
+          }
+          h1.site-heading span.span2{
               font-family: 'Satisfy', cursive;
               font-weight: lighter;
           }
@@ -94,7 +100,7 @@
     
     <nav class="navbar navbar-expand-lg navbar-dark site_navbar bg-dark site-navbar-light" id="site-navbar">
       <div class="container">
-          <a class="navbar-brand" href="index.html"><img class="logo" src="images/logo.png" width="100px;"></a>
+          <a class="navbar-brand" href="index.html"><img class="logo" src="images/logo.png" width="120px;"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#site-nav" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="oi oi-menu"></span> Menu
         </button>
@@ -128,8 +134,8 @@
             <div class="container">
                 <div class="row align-items-center justify-content-center text-center site-vh-100">
                   <div class="col-md-12">
-                    <h1 class="site-heading site-animate mb-3">Welcome To <span>Momo Crave</span></h1>
-                    <h2 class="h5 site-subheading mb-5 site-animate">Come and experience our friendly atmosphere and excellent service.</h2>    
+                      <h1 class="site-heading site-animate mb-3">Welcome To <span class="span1">Momo</span> <span class="span2">Crave</span></h1>
+                    <h2 class="h5 site-subheading mb-5 site-animate">Come and experience our flavorful &amp; colorful dumplings with other cuisines</h2>    
                   </div>
                 </div>
             </div>
@@ -238,7 +244,7 @@
                       <img class="mr-3" src="images/jhol-momo.jpg" class="img-fluid">
                       <div class="media-body">
                         <h5 class="mt-0">Momo</h5>
-                        <h6 class="text-primary menu-price">$6.00</h6>
+                        <h6 class="text-primary menu-price">$7.00</h6>
                       </div>
                     </div>
 
@@ -255,7 +261,7 @@
                       <div class="media-body">
                         <h5 class="mt-0">Tandoori Momo</h5>
                         <p>Fried momo marinated with special tandoori masala and grilled together with mixed peppers and onions</p>
-                        <h6 class="text-primary menu-price">$7.00</h6>
+                        <h6 class="text-primary menu-price">$8.00</h6>
                       </div>
                     </div>
                       
@@ -264,7 +270,7 @@
                       <div class="media-body">
                         <h5 class="mt-0">Sandeko Momo <i class="fas fa-pepper-hot"></i></h5>
                         <p>Marinated fried momo with spicy tangy sauce, mixed together with roasted soybean, onion, tomatoes and cilantro</p>
-                        <h6 class="text-primary menu-price">$7.00</h6>
+                        <h6 class="text-primary menu-price">$8.00</h6>
                       </div>
                     </div>
                       
@@ -275,7 +281,15 @@
                         <p>Fried momo topped with avocado, black bean paste and salsa</p>
                         <h6 class="text-primary menu-price">$8.00</h6>
                       </div>
-                    </div>  
+                    </div>
+                      
+                    <div class="media menu-item">
+                      <img class="mr-3" src="images/cheese.jpg" class="img-fluid">
+                      <div class="media-body">
+                        <h5 class="mt-0">Cheese Momo</h5>
+                        <h6 class="text-primary menu-price">$7.00</h6>
+                      </div>
+                    </div>   
                   </div>
                     
                   <div class="col-md-6 site-animate">
@@ -291,9 +305,9 @@
                     <div class="media menu-item">
                       <img class="mr-3" src="images/chili.png" class="img-fluid">
                       <div class="media-body">
-                        <h5 class="mt-0">Chili Momo</h5>
+                        <h5 class="mt-0">Chili Momo <i class="fas fa-pepper-hot"></i></h5>
                         <p>Fried momo sautéed with special chilli sauce, onions, peppers, tomato and garlic</p>
-                        <h6 class="text-primary menu-price">$7.00</h6>
+                        <h6 class="text-primary menu-price">$8.00</h6>
                       </div>
                     </div>
 
@@ -311,11 +325,19 @@
                       <div class="media-body">
                         <h5 class="mt-0">Sukuti Momo <i class="fas fa-pepper-hot"></i></h5>
                         <p>Fried momo sautéed with garlic, ginger, sukuti (jerky) and marinated with special tangy spicy sauce, onion and cilantro</p>  
-                        <h6 class="text-primary menu-price">$8.00</h6>
+                        <h6 class="text-primary menu-price">$9.00</h6>
                       </div>
                     </div>
-
                       
+                      <div class="media menu-item">
+                      <img class="mr-3" src="images/sizzler.jpg" class="img-fluid">
+                      <div class="media-body">
+                        <h5 class="mt-0">Sizzler Momo</h5>
+                        <p>Shallow fried momo served with special sauce and stir-fried vegetables on a hot plate.</p>  
+                        <h6 class="text-primary menu-price">$9.00</h6>
+                      </div>
+                    </div>
+  
                   </div>  
                 </div>
               </div>
@@ -359,7 +381,24 @@
                       <div class="media-body">
                         <h5 class="mt-0">Chow Mein</h5>
                         <p>Stir fried noodle with mixed vegetable, onions, peppers and choice of meat</p>
-                        <h6 class="text-primary menu-price">$7.00</h6>
+                        <h6 class="text-primary menu-price">$8.00</h6>
+                      </div>
+                    </div>
+                    
+                    <div class="media menu-item">
+                      <img class="mr-3" src="images/chowmein.jpg" class="img-fluid">
+                      <div class="media-body">
+                        <h5 class="mt-0">Sukuti Chow Mein</h5>
+                        <p>Stir fried noodle with mixed vegetable, onions, peppers and jerkey meat</p>
+                        <h6 class="text-primary menu-price">$9.00</h6>
+                      </div>
+                    </div>
+                      
+                    <div class="media menu-item">
+                      <img class="mr-3" src="images/hotsour.jpg" class="img-fluid">
+                      <div class="media-body">
+                        <h5 class="mt-0">Hot &amp; Sour Soup</h5>
+                        <h6 class="text-primary menu-price">$5.00</h6>
                       </div>
                     </div>
 
@@ -370,6 +409,15 @@
                       <img class="mr-3" src="images/thukpa.jpg" class="img-fluid">
                       <div class="media-body">
                         <h5 class="mt-0">Thukpa</h5>
+                        <p>Soup base noodle with mixed vegetable/choice of meat</p>
+                        <h6 class="text-primary menu-price">$8.00</h6>
+                      </div>
+                    </div>
+                      
+                    <div class="media menu-item">
+                      <img class="mr-3" src="images/thenthuk1.jpg" class="img-fluid">
+                      <div class="media-body">
+                        <h5 class="mt-0">Thenthuk</h5>
                         <p>Soup base noodle with mixed vegetable/choice of meat</p>
                         <h6 class="text-primary menu-price">$8.00</h6>
                       </div>
@@ -396,7 +444,7 @@
                       <div class="media-body">
                         <h5 class="mt-0">Chicken Chili</h5>
                         <p>Fried boneless chicken sautéed with onion, garlic, tomatoes, green chilli, mixed peppers and special chilli sauce</p>
-                        <h6 class="text-primary menu-price">$8.00</h6>
+                        <h6 class="text-primary menu-price">$7.00</h6>
                       </div>
                     </div>  
 
@@ -634,7 +682,7 @@
           <div class="col-md site-animate">
             <p style="text-align: center;"><img src="images/o.jpg" alt="" class="img-fluid"></p>
             <p class="text-black">
-                Open 7 Days a Week
+                Open Mon - Sun | Closed on Tue
             </p> 
               
             <div class="row justify-content-center">
@@ -683,7 +731,7 @@
            <div class="col-md-12 text-center">
             <div class="site-footer-widget mb-4">
               <ul class="site-footer-social list-unstyled ">
-                <li class="site-animate"><a href="https://www.yelp.com/biz/momo-crave-woodside" target="_blank"><i class="fab fa-yelp" style="position: relative;top: 50%;transform: translateY(-50%);font-size: 30px;"></i></a></li>
+                <li class="site-animate"><a href="https://www.google.com/search?sxsrf=ALeKk002xX3FB1j8Q7rjEiwLYcEpHl39_Q%3A1582738241344&source=hp&ei=QatWXtzrEbOIytMPveGP6Ac&q=momo+crave&oq=momo+cr&gs_l=psy-ab.3.0.0l10.181.1286..2138...0.0..1.315.1007.4j1j1j1......0....1..gws-wiz.......35i39j0i131j0i10.kMw8srheE9Q#lrd=0x89c25fc5800af73d:0xa37c6cd8382d23d6,1,,," target="_blank"><i class="fab fa-google" style="position: relative;top: 50%;transform: translateY(-50%);font-size: 30px;"></i></a></li><li class="site-animate"><a href="https://www.yelp.com/biz/momo-crave-woodside" target="_blank"><i class="fab fa-yelp" style="position: relative;top: 50%;transform: translateY(-50%);font-size: 30px;"></i></a></li>
                 <li class="site-animate"><a href="https://www.facebook.com/momocrave/" target="_blank"><i class="fab fa-facebook-f" style="position: relative;top: 50%;transform: translateY(-50%);font-size: 30px;"></i></a></li>
                 <li class="site-animate"><a href="https://www.instagram.com/momocrave" target="_blank"><span class="icon-instagram"></span></a></li>
               </ul>
