@@ -461,6 +461,15 @@ textarea.form-control {
     margin-bottom: 10px;
     width: 100% !important;
   }
+    .lg-screen-h1{
+        display: none;
+    }
+    .sm-screen-h1{
+        display: block !important;
+    }
+    .certification #rest_circ5{
+        transform: scale(.8) !important;
+    }
 }
 
 .site-tab-nav li {
