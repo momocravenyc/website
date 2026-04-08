@@ -23,6 +23,12 @@ elem.addEventListener("click",function(event){
 var date = new Date();
 let weekDay = date.getDay();
 
+var todayRow = document.querySelector('tr[data-day="' + weekDay + '"]');
+if (todayRow) {
+    todayRow.style.fontWeight = 'bold';
+    todayRow.style.color = '#c8a951';
+}
+
 
 if (weekDay==02){
     console.log("Today is Tuesday");
