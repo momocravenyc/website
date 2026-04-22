@@ -14,9 +14,8 @@ $(document).ready(function($) {
 
 	var carousel = function() {
 		$('.owl-carousel').owlCarousel({
-			loop: true,
+			loop: false,
 			margin: 10,
-			nav: true,
 			stagePadding: 5,
 			nav: false,
 			navText: ['<span class="icon-chevron-left">', '<span class="icon-chevron-right">'],
@@ -28,7 +27,7 @@ $(document).ready(function($) {
 					items: 2
 				},
 				1000:{
-					items: 4
+					items: 3
 				}
 			}
 		});
