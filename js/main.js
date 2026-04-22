@@ -47,13 +47,13 @@ $(document).ready(function($) {
 			if (st > 150) {
 				if ( !navbar.hasClass('scrolled') ) {
 					navbar.addClass('scrolled');
-                    logo.css("filter","invert(0%)");
+                    logo.attr("src","images/New Logo Blue.png");
 				}
-			} 
+			}
 			if (st < 150) {
 				if ( navbar.hasClass('scrolled') ) {
 					navbar.removeClass('scrolled sleep');
-                    logo.css("filter","invert(100%)");
+                    logo.attr("src","images/New Logo White.png");
 				}
 			} 
 			if ( st > 350 ) {
