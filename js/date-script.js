@@ -23,11 +23,11 @@ elem.addEventListener("click",function(event){
 var date = new Date();
 let weekDay = date.getDay();
 
-var todayRow = document.querySelector('tr[data-day="' + weekDay + '"]');
+var todayRow = document.querySelector('[data-day="' + weekDay + '"]');
 if (todayRow) {
-    todayRow.style.fontWeight = 'bold';
-    todayRow.style.color = '#c8a951';
+    todayRow.classList.add('is-today');
 }
+
 
 
 if (weekDay==02){
