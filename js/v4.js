@@ -177,17 +177,6 @@
 
   if (!fine) return; // the rest needs a real pointer
 
-  /* About pills tilt toward the pointer */
-  document.querySelectorAll('.pill').forEach(function (pill) {
-    pill.addEventListener('pointermove', function (e) {
-      var r = pill.getBoundingClientRect();
-      var x = (e.clientX - r.left) / r.width - 0.5;
-      var y = (e.clientY - r.top) / r.height - 0.5;
-      pill.style.transform = 'rotateY(' + x * 16 + 'deg) rotateX(' + -y * 10 + 'deg) translateZ(10px)';
-    });
-    pill.addEventListener('pointerleave', function () { pill.style.transform = ''; });
-  });
-
   /* News cards: spotlight follows the pointer */
   document.querySelectorAll('#section-news .site-media').forEach(function (card) {
     card.addEventListener('pointermove', function (e) {

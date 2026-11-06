@@ -75,7 +75,7 @@
 
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/v4.css?v=4.2e">
+    <link rel="stylesheet" href="css/v4.css?v=4.2j">
       
       <style>  
           @import url('https://fonts.googleapis.com/css?family=Crimson+Text&display=swap');
@@ -206,12 +206,12 @@
           }
           .text-center h2.display-4::after { margin-left: auto; margin-right: auto; }
           /* pill frames, like the wall panels */
-          .pill-row { display: flex; gap: 18px; align-items: flex-start; padding: 10px 10px 40px; }
-          .pill { flex: 1; aspect-ratio: 1 / 2.1; border-radius: 999px; overflow: hidden;
+          .pill-row { display: flex; gap: 34px; align-items: stretch; height: 520px; padding: 10px 14px 0; }
+          .pill { flex: 1 1 0; min-width: 0; position: relative; border-radius: 999px; overflow: hidden;
                   outline: 2px solid #048495; outline-offset: 6px; box-shadow: 0 12px 30px rgba(4,132,149,.18); }
-          .pill-drop { margin-top: 40px; }
           .right-img .pill img { position: static; top: auto; transform: none; width: 100%; height: 100%; object-fit: cover; border-radius: 0; display: block; }
-          @media (max-width: 767px) { .pill-row { gap: 12px; padding-bottom: 20px; } .pill-drop { margin-top: 24px; } }
+          @media (max-width: 991px) { .pill-row { height: 480px; } }
+          @media (max-width: 575px) { .pill-row { height: 340px; gap: 16px; padding: 10px 8px 0; } }
           pre{
               color: #fff;
           }
@@ -260,7 +260,7 @@
             </div>
         </div> 
       
-    <section class="site-cover" style="background-image: url(images/frymomos.jpg);" id="section-home">
+    <section class="site-cover" style="background-image: url(images/hero-momos.jpg?v=3);" id="section-home">
         <div class="black-overlay">
             <div class="container">
                 <div class="row align-items-center justify-content-center text-center site-vh-100">
@@ -302,8 +302,8 @@
     </section>
     <section class="site-section" id="section-about">
       <div class="container">
-        <div class="row">
-          <div class="col-md-5 site-animate mb-5">
+        <div class="row align-items-center">
+          <div class="col-lg-5 site-animate mb-5 mb-lg-0">
             <!--<h4 class="site-sub-title">Our Story</h4>-->
             <h2 class="site-primary-title display-4">About Us</h2>
             <p class="text-justify about-text">At Momo Crave all of our momo (dumplings) are meticulously made from scratch, the same way they are made in Nepal. 
@@ -314,11 +314,10 @@
             </p>
             <!--<p><a href="#" class="btn btn-secondary btn-lg">Learn More About Us</a></p>-->
           </div>
-          <div class="col-md-1"></div>
-          <div class="right-img col-md-6 site-animate img" data-animate-effect="fadeInRight">
+          <div class="right-img col-lg-7 site-animate img" data-animate-effect="fadeInRight">
             <div class="pill-row">
               <div class="pill"><img alt="Order counter with brass light fixture and teal ceiling at Momo Crave" loading="lazy" decoding="async" src="images/about/counter.jpg"></div>
-              <div class="pill pill-drop"><img alt="Blue booth seating under framed art at Momo Crave" loading="lazy" decoding="async" src="images/about/booth.jpg"></div>
+              <div class="pill"><img alt="Blue booth seating under framed art at Momo Crave" loading="lazy" decoding="async" src="images/about/booth.jpg"></div>
               <div class="pill"><img alt="Blue lotus wall panels above the booths at Momo Crave" loading="lazy" decoding="async" src="images/about/lotus.jpg"></div>
             </div>
           </div>
@@ -686,9 +685,9 @@
            <div class="col-md-12 text-center">
             <div class="site-footer-widget mb-4">
               <ul class="site-footer-social list-unstyled ">
-                <li class="site-animate"><a href="https://www.google.com/search?sxsrf=ALeKk002xX3FB1j8Q7rjEiwLYcEpHl39_Q%3A1582738241344&source=hp&ei=QatWXtzrEbOIytMPveGP6Ac&q=momo+crave&oq=momo+cr&gs_l=psy-ab.3.0.0l10.181.1286..2138...0.0..1.315.1007.4j1j1j1......0....1..gws-wiz.......35i39j0i131j0i10.kMw8srheE9Q#lrd=0x89c25fc5800af73d:0xa37c6cd8382d23d6,1,,," target="_blank"><i class="fab fa-google" style="position: relative;top: 50%;transform: translateY(-50%);font-size: 30px;"></i></a></li><li class="site-animate"><a href="https://www.yelp.com/biz/momo-crave-woodside" target="_blank"><i class="fab fa-yelp" style="position: relative;top: 50%;transform: translateY(-50%);font-size: 30px;"></i></a></li>
-                <li class="site-animate"><a href="https://www.facebook.com/momocrave/" target="_blank"><i class="fab fa-facebook-f" style="position: relative;top: 50%;transform: translateY(-50%);font-size: 30px;"></i></a></li>
-                <li class="site-animate"><a href="https://www.instagram.com/momocrave" target="_blank"><span class="icon-instagram"></span></a></li>
+                <li class="site-animate"><a href="https://www.google.com/search?sxsrf=ALeKk002xX3FB1j8Q7rjEiwLYcEpHl39_Q%3A1582738241344&source=hp&ei=QatWXtzrEbOIytMPveGP6Ac&q=momo+crave&oq=momo+cr&gs_l=psy-ab.3.0.0l10.181.1286..2138...0.0..1.315.1007.4j1j1j1......0....1..gws-wiz.......35i39j0i131j0i10.kMw8srheE9Q#lrd=0x89c25fc5800af73d:0xa37c6cd8382d23d6,1,,," target="_blank" rel="noopener" aria-label="Momo Crave on Google"><i class="fab fa-google" aria-hidden="true" style="position: relative;top: 50%;transform: translateY(-50%);font-size: 30px;"></i></a></li><li class="site-animate"><a href="https://www.yelp.com/biz/momo-crave-woodside" target="_blank" rel="noopener" aria-label="Momo Crave on Yelp"><i class="fab fa-yelp" aria-hidden="true" style="position: relative;top: 50%;transform: translateY(-50%);font-size: 30px;"></i></a></li>
+                <li class="site-animate"><a href="https://www.facebook.com/momocrave/" target="_blank" rel="noopener" aria-label="Momo Crave on Facebook"><i class="fab fa-facebook-f" aria-hidden="true" style="position: relative;top: 50%;transform: translateY(-50%);font-size: 30px;"></i></a></li>
+                <li class="site-animate"><a href="https://www.instagram.com/momocrave" target="_blank" rel="noopener" aria-label="Momo Crave on Instagram"><span class="icon-instagram" aria-hidden="true"></span></a></li>
               </ul>
             </div>
           </div>
@@ -718,7 +717,7 @@
     <script src="js/jquery.animateNumber.min.js"></script>
 
     <script src="js/main.js"></script>
-    <script src="js/v4.js?v=4.2b"></script>
+    <script src="js/v4.js?v=4.2c"></script>
 
       <script>
           $('.load-more-btn').click(()=>{

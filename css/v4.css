@@ -11,6 +11,10 @@
   --snap: cubic-bezier(.2, .9, .25, 1.15);
 }
 
+/* ---------- hero: photo is cropped so the momo pile sits on the centre line;
+   65% lowers it so the pile, not the plate rim, is behind the logo ---------- */
+#section-home.site-cover { background-position: center 55%; }
+
 /* ---------- scroll progress ---------- */
 .mc-progress {
   position: fixed; top: 0; left: 0; height: 3px; width: 100%;
@@ -135,16 +139,18 @@
 .btn.btn-primary:hover { box-shadow: 4px 4px 0 0 var(--ink); }
 .btn.btn-primary:active { box-shadow: 1px 1px 0 0 var(--ink); }
 
-/* ---------- About: pills tilt toward the pointer ---------- */
-.pill-row { perspective: 900px; }
+/* ---------- About: pill gallery, hovered photo widens to show more ---------- */
 .pill {
-  transform-style: preserve-3d;
-  transition: transform .35s var(--snap), outline-offset .25s var(--snap), box-shadow .35s;
+  transition: flex-grow .6s cubic-bezier(.65, 0, .2, 1), outline-offset .25s var(--snap), box-shadow .35s;
   box-shadow: 0 18px 40px rgba(4, 132, 149, .22), 0 4px 10px rgba(0, 0, 0, .08) !important;
 }
-.pill img { transition: transform .5s var(--snap); }
-.pill:hover { outline-offset: 3px; box-shadow: 0 28px 60px rgba(4, 132, 149, .32), 0 6px 14px rgba(0, 0, 0, .1) !important; }
-.pill:hover img { transform: scale(1.08); }
+.pill img { transition: transform .8s cubic-bezier(.65, 0, .2, 1); }
+@media (hover: hover) {
+  .pill-row:hover .pill { flex-grow: .75; }
+  .pill-row .pill:hover { flex-grow: 1.9; outline-offset: 3px;
+    box-shadow: 0 28px 60px rgba(4, 132, 149, .32), 0 6px 14px rgba(0, 0, 0, .1) !important; }
+  .pill:hover img { transform: scale(1.04); }
+}
 
 /* ---------- Menu: plates spin, names slide ---------- */
 .menu-item { position: relative; border-radius: 70px; padding: 10px 14px 10px 10px; margin-left: -10px;
@@ -204,6 +210,31 @@
   100% { stroke-dashoffset: -70; opacity: 0; transform: translate(var(--sway, 0), -22px); }
 }
 
+/* ---------- footer social: teal buttons, idle wave, ripple on hover ---------- */
+.site-footer-social li a {
+  background: var(--teal); color: #fff !important;
+  box-shadow: 0 6px 16px rgba(4, 132, 149, .35);
+  animation: mc-bob 3.2s ease-in-out infinite;
+  transition: background .25s, box-shadow .3s;
+}
+.site-footer-social li:nth-child(2) a { animation-delay: .25s; }
+.site-footer-social li:nth-child(3) a { animation-delay: .5s; }
+.site-footer-social li:nth-child(4) a { animation-delay: .75s; }
+@keyframes mc-bob { 0%, 60%, 100% { translate: 0 0; } 30% { translate: 0 -6px; } }
+.site-footer-social li a i, .site-footer-social li a span { transition: transform .4s var(--snap); }
+.site-footer-social li a::after { /* ripple ring */
+  content: ""; position: absolute; inset: 0; border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(4, 132, 149, .6); pointer-events: none;
+}
+.site-footer-social li a:hover, .site-footer-social li a:focus-visible {
+  animation-play-state: paused; background: #06a3b8; translate: 0 -8px;
+  box-shadow: 0 14px 28px rgba(4, 132, 149, .5);
+}
+.site-footer-social li a:hover::after, .site-footer-social li a:focus-visible::after { animation: mc-ripple .8s ease-out; }
+.site-footer-social li a:hover i { transform: translateY(-50%) scale(1.18) rotate(-8deg) !important; }
+.site-footer-social li a:hover span { transform: translate(-50%, -50%) scale(1.18) rotate(-8deg); }
+@keyframes mc-ripple { to { box-shadow: 0 0 0 16px rgba(4, 132, 149, 0); } }
+
 /* ---------- footer credit: quiet at rest, Galicore's transit brand on hover ---------- */
 .mc-credit { position: relative; display: inline; color: inherit !important; text-decoration: none !important; }
 .mc-credit__g { /* Galicore Block G */
@@ -232,6 +263,7 @@
   .pill, .pill img, .menu-item, .menu-item img, .menu-item h5, #section-news .site-media,
   #section-news .site-media > img, .site-thumbnail img, #section-order a img, .btn.btn-primary { transition: none !important; }
   .mc-wisp { display: none; }
+  .site-footer-social li a { animation: none !important; }
 }
 
 /* ---------- Contact: arch photo, hours card, info rows ---------- */
