@@ -20,12 +20,12 @@ a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
-  color: #FDA403;
+  color: #048495;
 }
 
 a:hover {
   text-decoration: none;
-  color: #FDA403;
+  color: #048495;
 }
 
 h1, h2, h3, h4, h5,
@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5,
 }
 
 .text-primary {
-  color: #FDA403 !important;
+  color: #048495 !important;
 }
 
 .site-navbar-light {
@@ -162,7 +162,7 @@ h1, h2, h3, h4, h5,
 }
 
 .site-navbar-light.scrolled .nav-link.active {
-  color: #FDA403 !important;
+  color: #048495 !important;
 }
 
 .site-navbar-light.scrolled.awake {
@@ -232,7 +232,7 @@ h1, h2, h3, h4, h5,
   bottom: 0;
   left: 0;
   right: 0;
-  background: #FDA403;
+  background: #048495;
   height: 2px;
   content: " ";
 }
@@ -373,8 +373,8 @@ h1, h2, h3, h4, h5,
 }
 
 .btn.btn-secondary:hover {
-  background: #FDA403;
-  border-color: #FDA403;
+  background: #048495;
+  border-color: #048495;
   color: #fff;
 }
 
@@ -389,14 +389,14 @@ h1, h2, h3, h4, h5,
 }
 
 .btn.btn-primary {
-  background: #FDA403;
-  border-color: #FDA403;
+  background: #048495;
+  border-color: #048495;
   color: #fff;
 }
 
 .btn.btn-primary:hover, .btn.btn-primary:focus, .btn.btn-primary:active {
-  border-color: #cb8402;
-  background: #cb8402;
+  border-color: #035863;
+  background: #035863;
 }
 
 .btn.btn-outline-white {
@@ -507,7 +507,7 @@ textarea.form-control {
 }
 
 .bg-primary {
-  background: #FDA403 !important;
+  background: #048495 !important;
 }
 
 .site-section .site-sub-title {
@@ -577,7 +577,7 @@ textarea.form-control {
 }
 
 .site-footer a:hover {
-  color: #FDA403;
+  color: #048495;
 }
 
 .site-footer .site-heading {
@@ -601,7 +601,7 @@ textarea.form-control {
   font-size: 14px;
   margin-top: -16px;
   right: 0;
-  background: #FDA403;
+  background: #048495;
   color: #fff;
   padding: 2px 10px;
   position: absolute;
@@ -676,7 +676,7 @@ textarea.form-control {
 }
 
 .footer-small-nav > li a:hover, .footer-small-nav > li a:focus {
-  color: #FDA403;
+  color: #048495;
 }
 
 .media .site-icon {
@@ -684,7 +684,7 @@ textarea.form-control {
 }
 
 .media .site-icon span {
-  color: #FDA403;
+  color: #048495;
 }
 
 .site-media {
@@ -728,7 +728,7 @@ textarea.form-control {
 .site-owl .owl-nav .owl-next {
   position: absolute;
   font-size: 30px;
-  background: #FDA403;
+  background: #048495;
   color: #fff;
   padding: 10px;
   line-height: 0;
@@ -763,7 +763,7 @@ textarea.form-control {
 }
 
 .site-owl .owl-dots .owl-dot.active span {
-  background: #FDA403;
+  background: #048495;
 }
 
 .site-owl:hover .owl-nav {
@@ -869,7 +869,7 @@ textarea.form-control {
   display: block;
   font-size: 72px;
   font-weight: bold;
-  color: #FDA403;
+  color: #048495;
 }
 
 .site-counter .site-label {

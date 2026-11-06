@@ -1,0 +1,120 @@
+/* ==========================================================================
+   Momo Crave V4 — interaction layer
+   Teal from the badge logo; motion is short and snappy, never floaty.
+   Everything here degrades to the static site when motion is reduced.
+   ========================================================================== */
+:root {
+  --teal: #048495;
+  --teal-deep: #035863;
+  --ink: #111;
+  --cream: #fbf0d9;
+  --snap: cubic-bezier(.2, .9, .25, 1.15);
+}
+
+/* ---------- scroll progress ---------- */
+.mc-progress {
+  position: fixed; top: 0; left: 0; height: 3px; width: 100%;
+  background: var(--teal); transform-origin: 0 50%; transform: scaleX(0);
+  z-index: 3000; pointer-events: none;
+}
+
+/* ---------- ticker band (kinetic type, badge-style font) ---------- */
+.mc-ticker {
+  background: var(--teal); color: #fff; overflow: hidden; white-space: nowrap;
+  border-top: 3px solid var(--ink); border-bottom: 3px solid var(--ink);
+  padding: 14px 0; position: relative; z-index: 2;
+}
+.mc-ticker__track { display: inline-flex; animation: mc-ticker 38s linear infinite; }
+.mc-ticker:hover .mc-ticker__track { animation-play-state: paused; }
+.mc-ticker__item {
+  font-family: 'Paytone One', sans-serif; text-transform: uppercase;
+  font-size: 22px; letter-spacing: .06em; display: inline-flex; align-items: center;
+  padding: 0 22px; transition: color .15s;
+}
+.mc-ticker__item:hover { color: var(--cream); }
+.mc-ticker__item img { width: 26px; height: 26px; margin-left: 44px; transition: transform .3s var(--snap); }
+.mc-ticker__item:hover img { transform: rotate(-18deg) scale(1.25); }
+@keyframes mc-ticker { to { transform: translateX(-50%); } }
+
+/* ---------- checker divider: squares pop in when the header is reached ---------- */
+.site-section h2.display-4::after {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path .7s steps(4, end);
+}
+.site-section h2.display-4.mc-in::after { clip-path: inset(0 0 0 0); }
+
+/* ---------- buttons: magnetic + offset shadow ---------- */
+.btn.btn-primary {
+  transition: background .2s, box-shadow .2s var(--snap), translate .25s var(--snap);
+  box-shadow: 0 0 0 0 var(--ink);
+}
+.btn.btn-primary:hover { box-shadow: 4px 4px 0 0 var(--ink); }
+.btn.btn-primary:active { box-shadow: 1px 1px 0 0 var(--ink); }
+
+/* ---------- About: pills tilt toward the pointer ---------- */
+.pill-row { perspective: 900px; }
+.pill {
+  transform-style: preserve-3d;
+  transition: transform .35s var(--snap), outline-offset .25s var(--snap), box-shadow .35s;
+  box-shadow: 0 18px 40px rgba(4, 132, 149, .22), 0 4px 10px rgba(0, 0, 0, .08) !important;
+}
+.pill img { transition: transform .5s var(--snap); }
+.pill:hover { outline-offset: 3px; box-shadow: 0 28px 60px rgba(4, 132, 149, .32), 0 6px 14px rgba(0, 0, 0, .1) !important; }
+.pill:hover img { transform: scale(1.05); }
+
+/* ---------- Menu: plates spin, names slide ---------- */
+.menu-item img { transition: transform .5s var(--snap), box-shadow .3s; }
+.menu-item h5 { transition: color .2s, translate .25s var(--snap); }
+.menu-item:hover img { transform: rotate(10deg) scale(1.05); box-shadow: 0 10px 22px rgba(0, 0, 0, .18); }
+.menu-item:hover h5 { color: var(--teal); translate: 6px 0; }
+
+/* ---------- News: teal panel, deep shadow, lift + spotlight ---------- */
+#section-news .site-media {
+  outline: 2px solid var(--teal) !important; outline-offset: 8px;
+  box-shadow: 0 24px 50px rgba(4, 132, 149, .18), 0 8px 18px rgba(0, 0, 0, .08) !important;
+  transition: translate .35s var(--snap), outline-offset .25s var(--snap), box-shadow .35s;
+  position: relative; isolation: isolate; border-radius: 48px; overflow: hidden; margin: 0 10px 56px !important;
+}
+@media (max-width: 767px) { #section-news .site-media { border-radius: 28px; outline-offset: 6px; margin-bottom: 36px !important; } }
+#section-news .site-media > img { transition: transform .7s var(--snap); }
+#section-news .site-media::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: -1;
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 80%), rgba(4, 132, 149, .14), transparent 60%);
+  opacity: 0; transition: opacity .3s;
+}
+#section-news .media-body { background: transparent; }
+#section-news .site-media:hover {
+  translate: 0 -8px; outline-offset: 3px;
+  box-shadow: 0 40px 80px rgba(4, 132, 149, .26), 0 14px 28px rgba(0, 0, 0, .12) !important;
+}
+#section-news .site-media:hover > img { transform: scale(1.05); }
+#section-news .site-media:hover::after { opacity: 1; }
+
+/* ---------- Gallery ---------- */
+.site-thumbnail { display: block; overflow: hidden; border-radius: 22px; }
+.site-thumbnail img { transition: transform .6s var(--snap), filter .3s; }
+.site-thumbnail:hover img { transform: scale(1.04); }
+
+/* ---------- Order platform logos ---------- */
+#section-order a img { transition: transform .3s var(--snap); }
+#section-order a:hover img { transform: translateY(-4px); }
+
+/* ---------- click steam ---------- */
+.mc-steam {
+  position: fixed; width: 10px; height: 10px; border-radius: 50%; pointer-events: none; z-index: 4000;
+  background: rgba(255, 255, 255, .9); box-shadow: 0 0 0 1.5px rgba(4, 132, 149, .55);
+  animation: mc-steam .7s ease-out forwards;
+}
+@keyframes mc-steam {
+  from { transform: translate(-50%, -50%) scale(.4); opacity: 1; }
+  to { transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) scale(1.6); opacity: 0; }
+}
+
+/* ---------- respect reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .mc-ticker__track { animation: none; }
+  .site-section h2.display-4::after { clip-path: none; transition: none; }
+  .pill, .pill img, .menu-item img, .menu-item h5, #section-news .site-media,
+  #section-news .site-media > img, .site-thumbnail img, #section-order a img, .btn.btn-primary { transition: none !important; }
+  .mc-steam { display: none; }
+}

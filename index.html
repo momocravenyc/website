@@ -74,6 +74,7 @@
 
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/v4.css">
       
       <style>  
           @import url('https://fonts.googleapis.com/css?family=Crimson+Text&display=swap');
@@ -134,7 +135,7 @@
         }
         .overlay-notify input{
             position: absolute;
-            background-color: #fd990a;
+            background-color: #048495;
             color: #fff;
             border: none;
             width: 100px;
@@ -193,6 +194,23 @@
           .btn.btn-primary.btn-teal:hover, .btn.btn-primary.btn-teal:focus, .btn.btn-primary.btn-teal:active { background: #036f7d !important; border-color: #036f7d !important; color: #fff; }
           .about-text { color: #444; }
           .menu-item img { width: 100px; height: 100px; object-fit: cover; flex-shrink: 0; border-radius: 50%; }
+          /* V4: interior-inspired design */
+          html, body { cursor: url('images/cursor-momo.png') 16 5, auto; cursor: -webkit-image-set(url('images/cursor-momo.png') 1x, url('images/cursor-momo@2x.png') 2x) 16 5, auto; }
+          a, button, .btn, [role="button"], input[type="button"], .navbar-toggler { cursor: url('images/cursor-momo.png') 16 5, pointer; cursor: -webkit-image-set(url('images/cursor-momo.png') 1x, url('images/cursor-momo@2x.png') 2x) 16 5, pointer; }
+          input[type="text"], input[type="email"], textarea { cursor: text; }
+          /* checker strip from the badge, under section headers */
+          .site-section h2.display-4::after {
+              content: ""; display: block; width: 64px; height: 16px; margin: 18px 0 0;
+              background: conic-gradient(#048495 25%, transparent 0 50%, #048495 0 75%, transparent 0) 0 0 / 16px 16px;
+          }
+          .text-center h2.display-4::after { margin-left: auto; margin-right: auto; }
+          /* pill frames, like the wall panels */
+          .pill-row { display: flex; gap: 18px; align-items: flex-start; padding: 10px 10px 40px; }
+          .pill { flex: 1; aspect-ratio: 1 / 2.1; border-radius: 999px; overflow: hidden;
+                  outline: 2px solid #048495; outline-offset: 6px; box-shadow: 0 12px 30px rgba(4,132,149,.18); }
+          .pill-drop { margin-top: 40px; }
+          .right-img .pill img { position: static; top: auto; transform: none; width: 100%; height: 100%; object-fit: cover; border-radius: 0; display: block; }
+          @media (max-width: 767px) { .pill-row { gap: 12px; padding-bottom: 20px; } .pill-drop { margin-top: 24px; } }
           pre{
               color: #fff;
           }
@@ -260,6 +278,8 @@
     </section>
     <!-- END section -->
     
+
+    <div class="mc-ticker" aria-hidden="true"><div class="mc-ticker__track"><span class="mc-ticker__item">Steamed Momo<img src="images/cursor-momo.svg" alt=""></span><span class="mc-ticker__item">Jhol Momo<img src="images/cursor-momo.svg" alt=""></span><span class="mc-ticker__item">Chilli Momo<img src="images/cursor-momo.svg" alt=""></span><span class="mc-ticker__item">Sandeko Momo<img src="images/cursor-momo.svg" alt=""></span><span class="mc-ticker__item">Taco Momo<img src="images/cursor-momo.svg" alt=""></span><span class="mc-ticker__item">Tandoori Momo<img src="images/cursor-momo.svg" alt=""></span><span class="mc-ticker__item">Sizzler Momo<img src="images/cursor-momo.svg" alt=""></span><span class="mc-ticker__item">Chaat Momo<img src="images/cursor-momo.svg" alt=""></span><span class="mc-ticker__item">Sukuti Momo<img src="images/cursor-momo.svg" alt=""></span><span class="mc-ticker__item">Thai Soup Momo<img src="images/cursor-momo.svg" alt=""></span><span class="mc-ticker__item">Pan Fried Momo<img src="images/cursor-momo.svg" alt=""></span><span class="mc-ticker__item">Steamed Momo<img src="images/cursor-momo.svg" alt=""></span><span class="mc-ticker__item">Jhol Momo<img src="images/cursor-momo.svg" alt=""></span><span class="mc-ticker__item">Chilli Momo<img src="images/cursor-momo.svg" alt=""></span><span class="mc-ticker__item">Sandeko Momo<img src="images/cursor-momo.svg" alt=""></span><span class="mc-ticker__item">Taco Momo<img src="images/cursor-momo.svg" alt=""></span><span class="mc-ticker__item">Tandoori Momo<img src="images/cursor-momo.svg" alt=""></span><span class="mc-ticker__item">Sizzler Momo<img src="images/cursor-momo.svg" alt=""></span><span class="mc-ticker__item">Chaat Momo<img src="images/cursor-momo.svg" alt=""></span><span class="mc-ticker__item">Sukuti Momo<img src="images/cursor-momo.svg" alt=""></span><span class="mc-ticker__item">Thai Soup Momo<img src="images/cursor-momo.svg" alt=""></span><span class="mc-ticker__item">Pan Fried Momo<img src="images/cursor-momo.svg" alt=""></span></div></div>
     <section class="site-section" id="section-about">
       <div class="container">
         <div class="row">
@@ -276,7 +296,11 @@
           </div>
           <div class="col-md-1"></div>
           <div class="right-img col-md-6 site-animate img" data-animate-effect="fadeInRight">
-            <img alt="Momo Crave storefront at 38-07 69th St, Woodside, Queens" loading="lazy" decoding="async" src="images/storefront.jpg" class="img-fluid">
+            <div class="pill-row">
+              <div class="pill"><img alt="Order counter with brass light fixture and teal ceiling at Momo Crave" loading="lazy" decoding="async" src="images/about/counter.jpg"></div>
+              <div class="pill pill-drop"><img alt="Blue booth seating under framed art at Momo Crave" loading="lazy" decoding="async" src="images/about/booth.jpg"></div>
+              <div class="pill"><img alt="Blue lotus wall panels above the booths at Momo Crave" loading="lazy" decoding="async" src="images/about/lotus.jpg"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -453,7 +477,7 @@
               <div class="media-body p-md-5 p-4">
 <!--                <h5 class="mt-0 h4">Chef Special Menu</h5>-->
                   <img alt="The New York Times logo" loading="lazy" decoding="async" src="images/nytimes.png" width="300px;">
-                <p class="mb-4">Momos That Stand Out in a Crowd.<br>by: <span style="color: #fd990a;">Jeenah Moon</span>
+                <p class="mb-4">Momos That Stand Out in a Crowd.<br>by: <span style="color: #048495;">Jeenah Moon</span>
                   </p>
 
                 <p class="mb-0"><a href="https://www.nytimes.com/2018/11/09/dining/momo-crave-review.html" class="btn btn-primary btn-sm" target="_blank">Read More</a></p>
@@ -465,7 +489,7 @@
               <img alt="Momo Crave featured in Grub Street" loading="lazy" decoding="async" src="images/grubhubNewsArticle.jpg" class="img-fluid" style="width:100%; max-height:500px; object-fit:cover;">
               <div class="media-body p-md-5 p-4">
                   <img alt="Grub Street logo" loading="lazy" decoding="async" src="images/grubstreetlogo.png" width="300px;">
-                  <p class="mb-4">The Absolute Best Momos in New York.<br>by: <span style="color: #fd990a;">Joe DiStefano</span>
+                  <p class="mb-4">The Absolute Best Momos in New York.<br>by: <span style="color: #048495;">Joe DiStefano</span>
                   </p>
                 <p class="mb-0"><a href="https://www.grubstreet.com/bestofnewyork/the-absolute-best-momos-in-nyc.html" class="btn btn-primary btn-sm" target="_blank">Read More</a></p>
               </div>
@@ -487,7 +511,7 @@
               <img alt="Momo Crave featured in The Infatuation" loading="lazy" decoding="async" src="images/Infatuation Cover.jpeg" class="img-fluid" style="width:100%; max-height:500px; object-fit:cover;">
               <div class="media-body p-md-5 p-4">
                   <img alt="The Infatuation logo" loading="lazy" decoding="async" src="images/Infatuation Logo.png" width="250px;">
-                  <p class="mb-4">Momo Crave.<br>by: <span style="color: #fd990a;">Carina Finn</span>
+                  <p class="mb-4">Momo Crave.<br>by: <span style="color: #048495;">Carina Finn</span>
                   </p>
                 <p class="mb-0"><a href="https://www.theinfatuation.com/new-york/reviews/momo-crave" class="btn btn-primary btn-sm" target="_blank">Read More</a></p>
               </div>
@@ -680,6 +704,7 @@
     <script src="js/jquery.animateNumber.min.js"></script>
 
     <script src="js/main.js"></script>
+    <script src="js/v4.js"></script>
 
       <script>
           $('.load-more-btn').click(()=>{
