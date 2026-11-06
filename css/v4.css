@@ -15,6 +15,17 @@
    65% lowers it so the pile, not the plate rim, is behind the logo ---------- */
 #section-home.site-cover { background-position: center 55%; }
 
+/* ---------- mobile nav bar: off-white instead of black ---------- */
+@media (max-width: 991px) {
+  .site-navbar-light, .site-navbar-light.scrolled { background: #f7f5f0 !important; box-shadow: 0 1px 0 rgba(0, 0, 0, .06); }
+  .site-navbar-light .navbar-toggler { color: #333 !important; border-color: rgba(0, 0, 0, .25) !important; }
+  .site-navbar-light .navbar-toggler:focus { outline: none; box-shadow: none; }
+  .site-navbar-light .navbar-toggler:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+  .site-navbar-light .navbar-nav > .nav-item > .nav-link { color: #333 !important; }
+  .site-navbar-light .navbar-nav > .nav-item.active > .nav-link,
+  .site-navbar-light .navbar-nav > .nav-item > .nav-link:hover { color: var(--teal) !important; }
+}
+
 /* ---------- scroll progress ---------- */
 .mc-progress {
   position: fixed; top: 0; left: 0; height: 3px; width: 100%;
@@ -112,7 +123,10 @@
 @media (max-width: 991px) {
   .mc-metro__top { grid-template-columns: 1fr; gap: 18px; }
   .mc-metro__legend { grid-auto-flow: column; justify-content: start; gap: 18px; }
-  .mc-strip { overflow-x: auto; height: 74px; }
+  /* the sideways-scrolling strip clips anything above it, so give the train headroom */
+  .mc-strip { overflow-x: auto; overflow-y: hidden; height: 96px; padding-top: 22px; margin-top: 10px; }
+  .mc-strip__line { top: 36px; }
+  .mc-strip__train { top: 10px; }
   .mc-strip { scrollbar-width: none; }
   .mc-strip::-webkit-scrollbar { display: none; }
   .mc-strip__stops { min-width: 900px; padding: 0 20px; }
@@ -141,13 +155,13 @@
 
 /* ---------- About: pill gallery, hovered photo widens to show more ---------- */
 .pill {
-  transition: flex-grow .6s cubic-bezier(.65, 0, .2, 1), outline-offset .25s var(--snap), box-shadow .35s;
+  transition: flex-grow .6s cubic-bezier(.65, 0, .2, 1), box-shadow .35s;
   box-shadow: 0 18px 40px rgba(4, 132, 149, .22), 0 4px 10px rgba(0, 0, 0, .08) !important;
 }
 .pill img { transition: transform .8s cubic-bezier(.65, 0, .2, 1); }
 @media (hover: hover) {
   .pill-row:hover .pill { flex-grow: .75; }
-  .pill-row .pill:hover { flex-grow: 1.9; outline-offset: 3px;
+  .pill-row .pill:hover { flex-grow: 1.9;
     box-shadow: 0 28px 60px rgba(4, 132, 149, .32), 0 6px 14px rgba(0, 0, 0, .1) !important; }
   .pill:hover img { transform: scale(1.04); }
 }
@@ -156,6 +170,8 @@
 .menu-item { position: relative; border-radius: 70px; padding: 10px 14px 10px 10px; margin-left: -10px;
   transition: background .25s, translate .25s var(--snap); }
 .menu-item img { transition: transform .5s var(--snap), box-shadow .3s; }
+/* the plate cut-outs have a thin white ring; clip it so it doesn't show on the light-grey menu background */
+#section-menu .menu-item img { clip-path: circle(46.5% at 50% 50%); }
 .menu-item h5 { transition: color .2s, translate .25s var(--snap); }
 .menu-item:hover { background: rgba(4, 132, 149, .06); }
 .menu-item:hover img { transform: rotate(14deg) scale(1.08); box-shadow: 0 10px 22px rgba(0, 0, 0, .18); }

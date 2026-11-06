@@ -75,7 +75,7 @@
 
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/v4.css?v=4.2j">
+    <link rel="stylesheet" href="css/v4.css?v=4.3e">
       
       <style>  
           @import url('https://fonts.googleapis.com/css?family=Crimson+Text&display=swap');
@@ -208,7 +208,7 @@
           /* pill frames, like the wall panels */
           .pill-row { display: flex; gap: 34px; align-items: stretch; height: 520px; padding: 10px 14px 0; }
           .pill { flex: 1 1 0; min-width: 0; position: relative; border-radius: 999px; overflow: hidden;
-                  outline: 2px solid #048495; outline-offset: 6px; box-shadow: 0 12px 30px rgba(4,132,149,.18); }
+                  box-shadow: 0 12px 30px rgba(4,132,149,.18); }
           .right-img .pill img { position: static; top: auto; transform: none; width: 100%; height: 100%; object-fit: cover; border-radius: 0; display: block; }
           @media (max-width: 991px) { .pill-row { height: 480px; } }
           @media (max-width: 575px) { .pill-row { height: 340px; gap: 16px; padding: 10px 8px 0; } }
@@ -240,8 +240,8 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active"><a href="#section-home" class="nav-link">Home</a></li>
             <li class="nav-item"><a href="#section-about" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="#section-order" class="nav-link">Order</a></li>
             <li class="nav-item"><a href="#section-menu" class="nav-link">Momo</a></li>
+            <li class="nav-item"><a href="#section-order" class="nav-link">Order</a></li>
             <li class="nav-item"><a href="#section-news" class="nav-link">News</a></li>
             <li class="nav-item"><a href="#section-gallery" class="nav-link">Gallery</a></li>
             <li class="nav-item"><a href="#section-contact" class="nav-link">Contact</a></li>
@@ -327,34 +327,7 @@
     <!-- END section -->
     
 
-    <section class="site-section bg-light" id="section-order">
-      <div class="container">
-        
-        <div class="row">
-          <div class="col-md-12 text-center mb-5 site-animate">
-            <!--<h4 class="site-sub-title">Our Offers</h4>-->
-            <h2 class="display-4">Order Online</h2>
-          </div>
-          <div class="col-md-12">
-            <div class="row justify-content-center align-items-center">
-              <div class="col-12 col-sm-4 text-center site-animate mb-4">
-                <a href="https://www.grubhub.com/restaurant/momo-crave-3807-69th-st-woodside/890555" target="_blank"><img alt="Order Momo Crave on Grubhub" loading="lazy" decoding="async" src="images/grubhub.png" class="img-fluid" style="max-width:200px;"></a>
-              </div>
-              <div class="col-12 col-sm-4 text-center site-animate mb-4">
-                <a href="https://www.ubereats.com/store/momo-crave/eN35S5YDTseu-udVlc37pA?srsltid=AfmBOoo3ujYkprYRgskg6PzBCBOeCe6cZjagisRCS0htvQNl8hFwqZ1s" target="_blank"><img alt="Order Momo Crave on Uber Eats" loading="lazy" decoding="async" src="images/Uber Eats logo.png" class="img-fluid" style="max-width:200px;"></a>
-              </div>
-              <div class="col-12 col-sm-4 text-center site-animate mb-4">
-                <a href="https://www.doordash.com/store/momo-crave-queens-602143/en-US" target="_blank"><img alt="Order Momo Crave on DoorDash" loading="lazy" decoding="async" src="images/doordash.png" class="img-fluid" style="max-width:200px;"></a>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </section>
-    <!-- END section -->
-
-    <section class="site-section" id="section-menu">
+    <section class="site-section bg-light" id="section-menu">
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center mb-5 site-animate">
@@ -453,6 +426,14 @@
                     </div>
 
                     <div class="media menu-item">
+                      <img alt="Mothuk momo: dumplings in broth soup with mixed vegetables" loading="lazy" decoding="async" class="mr-3" src="images/menu/mothuk-momo.jpg?v=1" class="img-fluid">
+                      <div class="media-body">
+                        <h5 class="mt-0">Mothuk Momo</h5>
+                        <p>Broth soup momo with mixed vegetables</p>
+                      </div>
+                    </div>
+
+                    <div class="media menu-item">
                       <img alt="Pan fried momos" loading="lazy" decoding="async" class="mr-3" src="images/menu/pan-fried-momo.jpg?v=3" class="img-fluid">
                       <div class="media-body">
                         <h5 class="mt-0">Pan Fried Momo</h5>
@@ -477,6 +458,33 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+    <!-- END section -->
+
+    <section class="site-section" id="section-order">
+      <div class="container">
+        
+        <div class="row">
+          <div class="col-md-12 text-center mb-5 site-animate">
+            <!--<h4 class="site-sub-title">Our Offers</h4>-->
+            <h2 class="display-4">Order Online</h2>
+          </div>
+          <div class="col-md-12">
+            <div class="row justify-content-center align-items-center">
+              <div class="col-12 col-sm-4 text-center site-animate mb-4">
+                <a href="https://www.grubhub.com/restaurant/momo-crave-3807-69th-st-woodside/890555" target="_blank"><img alt="Order Momo Crave on Grubhub" loading="lazy" decoding="async" src="images/grubhub.png" class="img-fluid" style="max-width:200px;"></a>
+              </div>
+              <div class="col-12 col-sm-4 text-center site-animate mb-4">
+                <a href="https://www.ubereats.com/store/momo-crave/eN35S5YDTseu-udVlc37pA?srsltid=AfmBOoo3ujYkprYRgskg6PzBCBOeCe6cZjagisRCS0htvQNl8hFwqZ1s" target="_blank"><img alt="Order Momo Crave on Uber Eats" loading="lazy" decoding="async" src="images/Uber Eats logo.png" class="img-fluid" style="max-width:200px;"></a>
+              </div>
+              <div class="col-12 col-sm-4 text-center site-animate mb-4">
+                <a href="https://www.doordash.com/store/momo-crave-queens-602143/en-US" target="_blank"><img alt="Order Momo Crave on DoorDash" loading="lazy" decoding="async" src="images/doordash.png" class="img-fluid" style="max-width:200px;"></a>
+              </div>
+            </div>
+          </div>
+          
         </div>
       </div>
     </section>
